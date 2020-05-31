@@ -7,8 +7,9 @@ pipeline {
      }
      stage('buiding project') {
         echo "Building project ..."
-        dir(hello-world)
-        sh 'ls -la'
-     }
+       dir('hello-world') {
+         sh 'ls -la'
+       }
+     } 
   }
 }
